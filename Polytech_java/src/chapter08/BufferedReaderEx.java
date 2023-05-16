@@ -13,11 +13,16 @@ public class BufferedReaderEx {
 
 	public static void main(String[] args) throws IOException {
 		File f = new File("C:\\\\javaex\\\\phone.txt");
+		
 		InputStreamReader is = new InputStreamReader(new FileInputStream(f), "UTF-8");
+		
 		BufferedReader reader = new BufferedReader(is);
+		
 		String line;
 		StringTokenizer st;
 		HashMap<String, String> map = new HashMap<String, String>();
+		
+		
 		while(!(line = reader.readLine()).equals("q")) {			
 			st = new StringTokenizer(line, " ");
 			while(st.hasMoreTokens()) {
